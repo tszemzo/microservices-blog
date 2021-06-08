@@ -1,6 +1,9 @@
 # Specify a base image
 FROM node:alpine
 
+# This line is because create-react-app open bug with Docker
+ENV CI=true
+
 # This creates the folder "app" inside "usr" inside the container
 WORKDIR /usr/app
 
